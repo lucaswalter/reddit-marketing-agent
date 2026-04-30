@@ -1,0 +1,5 @@
+{
+  "last_checked_at_utc": 1776711065,
+  "last_checked_iso": "2026-04-20T00:00:00Z",
+  "note": "Stores the latest created_utc among posts processed on last run. Next run processes only posts with created_utc > this value."
+}
