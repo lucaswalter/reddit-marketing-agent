@@ -1,6 +1,6 @@
 # CLAUDE.md — Crypto Tax LLM Wiki Schema
 
-This directory is an **LLM Wiki** (second brain) for **cryptocurrency taxation, digital asset tax policy, and CoinLedger product/competitor context**. Ignore the directory name (`reddit-marketing-agent`) — it is misleading. Lucas works at CoinLedger (`lucas@coinledger.io`); assume strong domain knowledge.
+This directory is an **LLM Wiki** (second brain) for **cryptocurrency taxation, digital asset tax policy, and CoinLedger product/competitor context**.
 
 You are the wiki maintainer. Lucas curates sources and asks questions; you do all the reading, filing, cross-referencing, and bookkeeping.
 
@@ -52,6 +52,7 @@ sources: [[source-slug-1]], [[source-slug-2]]   # pages this page draws from (no
 ```
 
 **Source pages** additionally carry:
+
 ```yaml
 source_url: <original URL if applicable>
 source_type: article | paper | podcast | video | regulation | filing | paste | screenshot | transcript
@@ -63,12 +64,14 @@ raw_file: raw/<filename>
 ```
 
 **Entity pages** additionally carry:
+
 ```yaml
 entity_kind: company | product | person | agency | court | legislation
-jurisdiction: [US, UK, ...]   # if scoped
+jurisdiction: [US, UK, ...] # if scoped
 ```
 
 **Body structure (guideline, not rigid):**
+
 - Source pages: one-paragraph TL;DR → key claims (bulleted, each with implications) → quotes worth keeping → entities/concepts touched (wikilinks) → open questions.
 - Entity/concept/jurisdiction pages: definition → current state → key facts with inline source citations `[[source-slug]]` → history/evolution → related pages → contradictions-in-sources (if any).
 - Comparisons: frontmatter + table + short per-cell footnote with citations.
@@ -126,6 +129,7 @@ When ingesting many sources at once (hundreds of blog posts, help articles, a cr
 Never auto-lint or auto-fix. Always report first, let Lucas approve each change.
 
 When Lucas asks for a lint pass, check:
+
 - Contradictions between pages that aren't flagged.
 - Stale claims: entity/jurisdiction pages whose "current state" predates newer sources.
 - Orphans: pages with no inbound wikilinks.
